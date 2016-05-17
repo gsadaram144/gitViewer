@@ -1,0 +1,22 @@
+<div ng-if="details!=='undefined'">
+  <h3>User Details:</h3>
+  <hr>
+  <p>
+    <label>Login Name :</label>{{details.login}}
+  </p>
+  <p>
+    <label>public Url :</label>{{details.url}}
+  </p>
+</div>
+<div ng-if="repos!=='undefined'">
+  <hr>
+  <h3>User repo results:</h3>
+  <hr>
+
+  <ul class="rel-results">
+    <li ng-repeat="repo in repos">
+      <p><label>Repo Name : </label>{{repo.full_name}}</p>
+      <p><label>Repo Description :</label> {{repo.description}}</p>
+    </li>
+  </ul>
+</div>

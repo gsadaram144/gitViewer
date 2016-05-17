@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <title>Git Viewer</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta charset="UTF-8">
+
+        <!-- load bootstrap and fontawesome via CDN -->
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+        <!-- load angular via CDN -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+        <script src="app.js"></script>
+    </head>
+    <body ng-app="gitApp" ng-controller="gitController">
+      <div class="row" >
+        <div class="col-md-6 col-md-offset-3">
+          <h4>Git Hub Search</h4>
+          <div class="form-group">
+            <input type="text" ng-model="userName" class="form-control" />
+          </div>
+          <button class="next btn btn-large btn-info" ng-click="next()">Search</button>
+        </div>
+      </div>
+      <div id="displayBlock" style="display: none;margin-top:10px">
+        <div id="repoDetails" ng-include="'partials/repoDetails.html'" class="well" style="padding-left: 20%;"></div>
+      </div>
+
+    </body>
+</html>
